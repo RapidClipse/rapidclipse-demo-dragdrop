@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<?xdevuiml version="1.0"?>
+<?template BROWSER_XGA?>
+<?import com.company.rapidclipse.demo.dragdrop.ui.WndExternalFileDragDrop?>
+<?import com.company.rapidclipse.demo.dragdrop.ui.WndTableListSelectDragDrop?>
+<?import com.company.rapidclipse.demo.dragdrop.ui.WndTreeDragDrop?>
+<?import com.company.rapidclipse.demo.dragdrop.ui.WndUIComponentDragDrop?>
+<?import com.xdev.ui.XdevButton?>
+<?import com.xdev.ui.XdevHorizontalSplitPanel?>
+<?import com.xdev.ui.XdevPanel?>
+<?import com.xdev.ui.XdevUI?>
+<?import com.xdev.ui.XdevVerticalLayout?>
+<?import com.xdev.ui.navigation.XdevNavigator?>
+<XdevUI xmlns:x="http://xml.xdev-software.com/xdevuiml" x:name="MainUI">
+    <x:constraints zpos="0" width="100%" height="100%" />
+    <XdevPanel x:name="panel">
+        <x:constraints zpos="0" width="100%" height="100%" />
+        <XdevHorizontalSplitPanel styleName="large" x:splitPosition="25.0" x:name="horizontalSplitPanel">
+            <x:constraints zpos="0" width="100%" height="100%" />
+            <XdevPanel x:name="panel2">
+                <x:constraints splitPos="FIRST" width="100%" height="100%" />
+                <XdevVerticalLayout x:name="verticalLayout">
+                    <x:constraints zpos="0" width="100%" height="100%" />
+                    <XdevButton caption="Tree Drag&amp;Drop" x:name="btnTreeDragDrop">
+                        <x:constraints weighty="0.0" width="100%" />
+                        <x:event>click.buttonClick</x:event>
+                    </XdevButton>
+                    <XdevButton caption="TableListSelectDragDrop" x:name="btnTableDragDrop">
+                        <x:constraints weighty="0.0" width="100%" />
+                        <x:event>click.buttonClick</x:event>
+                    </XdevButton>
+                    <XdevButton caption="UIComponentDragDrop" x:name="btnComponentDragDrop">
+                        <x:constraints weighty="0.0" width="100%" />
+                        <x:event>click.buttonClick</x:event>
+                    </XdevButton>
+                    <XdevButton caption="ExternalFileDragDrop" x:name="btnExternalFileDragDrop">
+                        <x:constraints weighty="0.0" width="100%" />
+                        <x:event>click.buttonClick</x:event>
+                    </XdevButton>
+                </XdevVerticalLayout>
+            </XdevPanel>
+            <XdevPanel x:name="navigationTargetContainer">
+                <x:constraints splitPos="SECOND" width="100%" height="100%" />
+            </XdevPanel>
+        </XdevHorizontalSplitPanel>
+    </XdevPanel>
+    <XdevNavigator x:target="navigationTargetContainer" x:name="navigator" x:singleComponentContainer="MainUI">
+        <x:views>
+            <entry path="" class="WndTreeDragDrop" />
+            <entry path="wndtablelistselectdragdrop" class="WndTableListSelectDragDrop" />
+            <entry path="wnduicomponentdragdrop" class="WndUIComponentDragDrop" />
+            <entry path="wndexternalfiledragdrop" class="WndExternalFileDragDrop" />
+        </x:views>
+    </XdevNavigator>
+</XdevUI>
+

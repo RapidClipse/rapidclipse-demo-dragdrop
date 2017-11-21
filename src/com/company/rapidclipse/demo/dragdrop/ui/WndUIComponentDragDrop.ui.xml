@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<?xdevuiml version="1.0"?>
+<?template NONE?>
+<?import com.xdev.ui.XdevAbsoluteLayout?>
+<?import com.xdev.ui.XdevPanel?>
+<?import com.xdev.ui.XdevView?>
+<XdevView xmlns:x="http://xml.xdev-software.com/xdevuiml" x:name="WndUIComponentDragDrop">
+    <x:constraints zpos="0" width="100%" height="100%" />
+    <XdevPanel x:name="panel">
+        <x:constraints zpos="0" width="100%" height="100%" />
+        <XdevAbsoluteLayout x:name="absoluteLayout">
+            <x:constraints zpos="0" width="100%" height="100%" />
+        </XdevAbsoluteLayout>
+    </XdevPanel>
+</XdevView>
+
