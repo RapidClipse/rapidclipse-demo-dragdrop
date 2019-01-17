@@ -61,7 +61,5 @@
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 		<nature>xdev.eclipse.vaadin.scssNature</nature>
 		<nature>org.hibernate.eclipse.console.hibernateNature</nature>
-		<nature>org.zeroturnaround.eclipse.jrebelNature</nature>
-		<nature>com.jaspersoft.studio.babel.editor.rbeNature</nature>
 	</natures>
 </projectDescription>
